@@ -1,7 +1,7 @@
 import os
 import imghdr
 
-def NameFormater(Path,Filer='/'):
+def PictureNameFormater(Path,Filer='/'):
 	SourcePath=Path
 	if os.path.isfile(Path):
 		Type=imghdr.what(Path)
