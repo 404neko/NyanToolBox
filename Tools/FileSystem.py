@@ -12,7 +12,10 @@ def PictureNameFormater(Path,Filer='/'):
 			PathList=Path.split(Filer)
 			FileName=PathList[-1]
 			FileNameList=FileName.split('.')
-			FileNameList[-1]=Type
+			if len(FileNameList)!=1:
+				FileNameList[-1]=Type
+			else:
+				FileNameList.append(Type)
 			FileName='.'.join(FileNameList)
 			PathList[-1]=FileName
 			Path=Filer.join(PathList)
