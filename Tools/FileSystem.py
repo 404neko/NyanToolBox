@@ -1,7 +1,7 @@
 import os
 import imghdr
 
-def PictureNameFormater(Path,Filer='/'):
+def PictureNameFormater(Path,Filer='/',Jpeg='jpg'):
 	SourcePath=Path
 	if os.path.isfile(Path):
 		Type=imghdr.what(Path)
@@ -9,6 +9,8 @@ def PictureNameFormater(Path,Filer='/'):
 			pass
 			print 'Nothing happend.'
 		else:
+			if Type=='jpeg':
+				Type=Jpeg
 			PathList=Path.split(Filer)
 			FileName=PathList[-1]
 			FileNameList=FileName.split('.')
