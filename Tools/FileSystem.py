@@ -28,3 +28,8 @@ def PictureNameFormater(Path,Filer='/',Jpeg='jpg'):
 				PathList[-2]=PathList[-2]+'_0'
 				Path='.'.join(PathList)
 				os.renames(SourcePath,Path)
+
+if __name__ =='__main__':	
+	List=os.listdir('.')
+	for File in List:
+		PictureNameFormater(File)

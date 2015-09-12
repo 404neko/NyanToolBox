@@ -12,3 +12,8 @@ def GetFileMD5(FilePath):
 		Hash.update(Bin)
 	File.close()
 	return Hash.hexdigest()
+
+def GetMD5(Data):
+	Hash=hashlib.md5()
+	Hash.update(Data)
+	return Hash.hexdigest()

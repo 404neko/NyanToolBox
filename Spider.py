@@ -23,3 +23,14 @@ def HaveAntiHotlink(ResourceLink,SourceDomain='http://www.example.com'):
  try:
   Request1=requests.get(ResourceLink)
 '''
+
+def LoadCookieLite(Json):
+	import json
+	try:
+		JsonObject=json.loads(Json)
+		Dict={}
+		for Data in JsonObject:
+			Dict[Data['name']]=Data['value']
+		return True,Dict
+	except:
+		return False,None
