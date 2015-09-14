@@ -1,4 +1,5 @@
 import hashlib
+import os
 
 def GetFileMD5(FilePath):
 	if not os.path.isfile(FilePath):

@@ -6,8 +6,7 @@ def PictureNameFormater(Path,Filer='/',Jpeg='jpg'):
 	if os.path.isfile(Path):
 		Type=imghdr.what(Path)
 		if Type==None:
-			pass
-			print 'Nothing happend.'
+			print 'Not a picture file.'
 		else:
 			if Type=='jpeg':
 				Type=Jpeg
