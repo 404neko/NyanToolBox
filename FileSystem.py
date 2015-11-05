@@ -24,3 +24,13 @@ def ReadForLine(FileHandle,SwitchForClose=1):
 	else:
 		pass
 	return List
+
+def FileNameFiler(String,Replacment=''):
+	List=['/','\\','*',':','?','"','<','>','|']
+	New=''
+	for i in String:
+		if i not in List:
+			New+=i
+		else:
+			New+=String,Replacment
+	return New
