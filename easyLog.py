@@ -11,7 +11,7 @@ eL_Tag={
 cL='['
 cR=']'
 eL_Joiner=': '
-eL_Separator='  '
+eL_Separator=' '
 eL_Newline='\n'
 
 def easyLog(Content,Level='I',TimeFormat='%H:%M:%S',std=sys.stdout,Separator=eL_Separator):
